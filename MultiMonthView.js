@@ -8,7 +8,7 @@
  *
  * path:    ui/MultiMonthView.js
  * desc:    多视图日历月份显示单元
- * author:  longyue<at>sina.com.cn
+ * author:  Long.phinome<at>google.com
  */
 
 ///import esui.Control;
