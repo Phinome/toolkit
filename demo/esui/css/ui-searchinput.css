@@ -1,0 +1,15 @@
+.ui-searchinput{
+    border:1px solid #d3d3d0;
+    position:relative;
+}
+.ui-searchinput .ui-text{
+    border:none;
+}
+.ui-searchinput-button{
+    width: 24px;
+    height: 26px;
+    background:url(img/esui.png) no-repeat -116px -118px;
+    position:absolute;
+    right:0px;
+    top:0px;
+}

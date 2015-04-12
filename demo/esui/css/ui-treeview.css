@@ -1,0 +1,81 @@
+/*
+ * ESUI (Enterprise Simple UI)
+ * Copyright 2010 Baidu Inc. All rights reserved.
+ * 
+ * path:    ui-treeview.css
+ * desc:    树控件
+ * author:  erik
+ * date:    $Date$
+ */
+
+.ui-treeview {
+    font-size:12px;
+}
+
+.ui-treeview-children {
+    padding:0 0 0 20px;
+    margin:0;
+}
+.ui-treeview li {
+    list-style:none;
+    padding:0;
+}
+
+.ui-treeview-node {
+    cursor:pointer;
+    height:22px;
+    line-height:22px;
+    padding:0 3px;
+    overflow:hidden;
+}
+
+/*.ui-treeview-node-type,.ui-treeview-node-root {display:none;}*/
+.ui-treeview-node-type{float:left}
+.ui-treeview-node-type-group
+{
+    display:none;
+}
+.ui-treeview-node-type-advert
+{
+    background:url(img/esui.png) no-repeat -102px -125px;
+    width:13px;
+    height:13px;
+    margin:4px 5px 0 0;
+}
+.ui-treeview-node-icon {
+    margin:5px 4px 0 0;
+    float:left;
+    width:16px;
+    height:12px;
+    overflow:hidden;
+    background:url(img/esui.png) -76px -144px;
+    display:none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.ui-treeview-node-level1 .ui-treeview-node-icon {
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+}
+.ui-treeview-node-expanded .ui-treeview-node-icon {
+    background:url(img/esui.png) -58px -144px;
+}
+
+.ui-treeview-children-root {padding-left:0;}
+
+.ui-treeview-node-text {
+    display:inline;
+}
+
+.ui-treeview-node-selected .ui-treeview-node-text {
+    font-weight:bold;
+}
+.ui-treeview-node-hover {
+    background:#f3f8fc;
+}
+
+.ui-treeview-node-leaf .ui-treeview-node-icon{
+    background:url(img/esui.png) -58px -144px;
+}
