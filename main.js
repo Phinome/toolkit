@@ -14,6 +14,41 @@ var proxy = function(func , thisObject) {
     )
 };
 
+var extend = function(source, target) {
+    for(var p in source) {
+        target[p] = source[p];
+    }
+
+    return target;
+};
+
+
+var inherits = function(subClazz, superClazz, type) {
+    var key,
+        proto,
+        selfProps = subClazz.prototype,
+        clazz = new Function();
+
+    clazz.prototype = superClazz.prototype;
+    proto = subClazz.prototype = new clazz();
+
+    for(key in selfProps) {
+        clazz[key] = selfProps[key];
+    }
+
+    subClazz.prototype.constructor = subClazz;
+    subClazz.superClass = superClazz.prototype;
+
+    typeof type === "string" && (proto.__type = type);
+
+    subClazz.extend = function(json) {
+        for(var i in json) {
+            proto[i] = json[i];
+        }
+        return subClazz;
+    }
+    return subClazz;
+};
 
 /**
  * 循环遍历数组集合
