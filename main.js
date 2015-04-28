@@ -124,4 +124,27 @@ function innerOnload() {
  * @return {HTMLScriptElement} 当前script标签
  */
 
+/**
+ * bind Function
+ * @param fn
+ * @param context => this;
+ * @description extArgs => arg1,arg2,....,argn
+ * /
+// native bind function define:
+// Function.prototype.bind(thisArg [, [arg1][,arg2,....]]);
+// From:https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+// @todo 考虑 fn 不是 Function 时
+
+
+var fbind = Function.prototype.bind
+    ? function(fn) {
+        fbind.apply(fn, Array.prototype.slice.call(arguments, 1));
+    }
+    : function(fn,context) {
+        var extArgs = Array.prototype.slice.call(arguments, 2);
+        return function() {
+            fn.apply(context, extArgs);
+            
+        }
+    };
 
